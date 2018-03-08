@@ -1,0 +1,138 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+<title>BuySell</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/././lib/w3.css">
+<script type="text/javascript" src="/././lib/jquery/dist/jquery.min.js"></script>
+   <script type="text/javascript" src="/././lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif;
+margin-top:30px;}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-black w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;opacity:0.5;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <div class="w3-padding-64">
+    <img src="/logofinal-01.png" height="200" width="200"/>
+  </div></div>
+  <div class="w3-bar-block">
+    <a href="#Home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-grey">Home</a> 
+    <a href="#Purchase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-grey">Purchase</a> 
+    <a href="#Sell" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-grey">Sell</a> 
+   <!--  <a href="#Trending" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-grey">Trending</a>  -->
+    <a href="/logout" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-grey">Logout</a>
+  </div>
+</nav>
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-grayscale" id="Home">
+      <div class="w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="/209265408.png" alt="John" height="200" width="200">
+          <div class="w3-container">
+            <h1 class="w3-right-align"><%=id%></h1>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="w3-center">
+<div id="Trending">
+ <div class="row">
+    <div class="col-md-6"><h3>Total number of users: <span id="total"></span></h3></div>
+    <div class="col-md-6"><h3>Average cost of each unit: <span id="avg"></span></h3></div>
+ </div>
+</div>
+<!-- End page content -->
+</div>
+  
+  <div class="w3-container" id="Sell" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-yellow"><b>Sell.</b></h1>
+      <hr style="width:50px;border:5px solid black;opacity:0.5;" class="w3-round">
+      <p>Do you want to sell? Please Fill out the form.</p>
+      <form>
+        <div class="w3-section">
+
+          <label>Number of units you want to sell.</label>
+          <input class="w3-input w3-border" type="text" id="sellunits" required>
+        </div>
+        <div class="w3-section">
+          <label>Price per unit</label>
+          <input class="w3-input w3-border" type="text" id="sellprice" required>
+        </div>
+       
+        <a id="getchain" class="w3-button w3-block w3-padding-large w3-yellow w3-margin-bottom">Sell</a>
+
+      </form>  
+    </div>
+  
+  <div class="w3-container" id="Purchase" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-yellow"><b>Purchase.</b></h1>
+    <hr style="width:50px;border:5px solid black;" class="w3-round">
+    <p>Do you want to purchase? Please Fill out the form.</p>
+    <form action="" target="_blank">
+      <div class="w3-section">
+        <label>How much unit of energy you are willing to buy?</label>
+        <input class="w3-input w3-border" type="text" name="buy-units" required>
+      </div>
+   
+      <button id="purchase" class="w3-button w3-block w3-padding-large w3-yellow w3-margin-bottom">Purchase</button>
+    </form>  
+  </div>
+  <br/>
+  <br/>
+  <br/>
+ 
+
+ <script type="text/javascript">
+  var sellunits=$('#sellunits').val();
+  var sellprice=$('#sellprice').val();
+
+
+      $("#getchain").on("click", function(){
+    $.get("http://localhost:8000/modify/user="+toString(<%=hash%>)+"&units="+sellprice+"&energy="+sellunits+"", function(data, status){
+       console.log("Data: " + JSON.stringify(data) + "Status: " + status);
+       console.log("Done! We'll notify you after "+sellunits + "units" + "have been sold at" + sellprice+ "price per unit ");
+    });
+});
+    </script>
+    <script type="text/javascript">
+      $("#purchase").on("click", function(){
+    $.get("http://localhost:8000/chain", function(data, status){console.log("Data: " + JSON.stringify(data) + "Status: " + status)});
+    }); </script>
+
+    <script type="text/javascript">
+
+    $.get("http://localhost:8000/chainLength", function(data, status){ console.log("Data: " + JSON.stringify(data) + "Status: " + status);  
+      $("#total").text(data.length);
+        }) 
+      </script>
+
+        <script type="text/javascript">
+
+    $.get("http://localhost:8000/avg", function(data, status){ console.log("Data: " + JSON.stringify(data) + "Status: " + status);  
+      $("#avg").text(data.avg_price);
+        }); </script>
+</body>
+</html>

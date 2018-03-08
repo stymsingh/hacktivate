@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Sign-up</title>
+   <link rel="stylesheet" href="././lib/bootstrap/dist/css/bootstrap.min.css">
+   <script type="text/javascript" src="././lib/jquery/dist/jquery.min.js"></script>
+   <script type="text/javascript" src="././lib/bootstrap/dist/js/bootstrap.min.js"></script>
+   
+<!--    <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+</head><style type="text/css">
+  #success_message{ display: none;}
+body{
+    margin-top:30px;
+    background-color: #fce67b;
+}
+legend{
+    font-size:30px;
+    font-family:"Impact", serif
+}
+</style>
+<body>
+
+<div class="container">
+
+    <form class="well form-horizontal text-center" action="auth/register" method="post"  id="contact_form">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Sign-up</legend>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Full Name </label>
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  name="name" placeholder="Medicine Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">E-Mail</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail Address" class="form-control"  type="email">
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+    <label class="col-md-4 control-label">Password</label>
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+    <input name="password" placeholder="Enter Password" class="form-control"  type="password">
+      </div>
+    </div>
+  </div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Phone #</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="phone" placeholder="(845)555-1212" class="form-control" type="number">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Address</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="add" placeholder="Address" class="form-control" type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">City</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="city" placeholder="city" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Select Basic -->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">State</label>
+    <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="state" class="form-control selectpicker" >
+      <option value=" " >Please select your state</option>
+      <option>Alabama</option>
+      <option>Alaska</option>
+      <option >Arizona</option>
+      <option >Arkansas</option>
+      <option >California</option>
+      <option >Colorado</option>
+      <option >Connecticut</option>
+      <option >Delaware</option>
+      <option >District of Columbia</option>
+      <option> Florida</option>
+      <option >Georgia</option>
+      <option >Hawaii</option>
+      <option >daho</option>
+      <option >Illinois</option>
+      <option >Indiana</option>
+      <option >Iowa</option>
+      <option> Kansas</option>
+      <option >Kentucky</option>
+      <option >Louisiana</option>
+      <option>Maine</option>
+      <option >Maryland</option>
+      <option> Mass</option>
+      <option >Michigan</option>
+      <option >Minnesota</option>
+      <option>Mississippi</option>
+      <option>Missouri</option>
+      <option>Montana</option>
+      <option>Nebraska</option>
+      <option>Nevada</option>
+      <option>New Hampshire</option>
+      <option>New Jersey</option>
+      <option>New Mexico</option>
+      <option>New York</option>
+      <option>North Carolina</option>
+      <option>North Dakota</option>
+      <option>Ohio</option>
+      <option>Oklahoma</option>
+      <option>Oregon</option>
+      <option>Pennsylvania</option>
+      <option>Rhode Island</option>
+      <option>South Carolina</option>
+      <option>South Dakota</option>
+      <option>Tennessee</option>
+      <option>Texas</option>
+      <option> Uttah</option>
+      <option>Vermont</option>
+      <option>Virginia</option>
+      <option >Washington</option>
+      <option >West Virginia</option>
+      <option>Wisconsin</option>
+      <option >Wyoming</option>
+    </select>
+  </div>
+</div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Zip Code</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+  <input name="zip" placeholder="Zip Code" class="form-control"  type="number">
+    </div>
+</div>
+</div>
+
+<!-- Text input-->
+
+
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning" style="background-color:#1a1a1a";>Save<span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container -->
+    </body>
+    </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Login</title>
+<link rel="stylesheet" href="././lib/bootstrap/dist/css/bootstrap.min.css">
+   <script type="text/javascript" src="././lib/jquery/dist/jquery.min.js"></script>
+   <script type="text/javascript" src="././lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</head><style type="text/css">
+  #success_message{ display: none;}
+body{
+    margin-top:30px;
+    background-color: #fce67b;
+}
+legend{
+    font-size:30px;
+    font-family:impact;
+    text-align:center;
+}
+</style>
+<body>
+
+<div class="container">
+
+    <form class="well form-horizontal text-center" action="auth/signin" method="post"  id="contact_form">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Login</legend>
+
+<img src="209265408.png" alt="user" class="user" height="150px" width="150px" margin="30px" border-radius="50%"/>
+<!-- Text input-->
+<br/>
+       <div class="form-group">
+           <br/>
+  <label class="col-md-4 control-label">E-Mail</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+    <label class="col-md-4 control-label">Password</label>
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+    <input name="password" placeholder="Enter Password" class="form-control"  type="password">
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-warning" style="background-color:#1a1a1a;">Login<span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+<input type="checkbox" checked="checked"> Remember me
+<br/>
+<span class="psw">Forgot <a href="#">password?</a></span>
+</fieldset>
+</form>
+</div>
+    </div><!-- /.container -->
+
+    </body>
+    </html>

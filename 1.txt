@@ -1,0 +1,31 @@
+3.00pm, till now we have built:
+1. Login/Signup page
+2. Block structure decided(backend)
+
+In next 8hours, we aim at:
+1. Google maps to locate user 
+2. Encryption and mapping of hashids
+3. Wallet structure
+
+10am, at this point we have done with main objectives as follows:
+1. Successful login/signup
+2. Blockchain techonology built. Here, each node represents either a buyer or seller of electric power, and all of them are connected.
+3. Hardware part: Since now, electric transmission takes place through wires. But there is an alternative to this, that we can transfer      electricity wirelessly. Solutions:
+  (i)   Unmanned aerier vehicles
+  (ii)  Resonant power transfer sytem that can be carried and operated
+  (iii) Designing of power receiving board that uses sensors
+4. Marketting plan: 5-10% of each block traded will be profit. 
+  
+At 12noon, we have reached almost end of our hackathon prpject "Block-Urja". Following are the features:
+1.  Successful login/signup
+2.  Blockchain techonology built. Here, each node represents either a buyer or seller of electric power, and all of them are connected.
+3.  Hardware part: Since now, electric transmission takes place through wires. But there is an alternative to this, that we can transfer       electricity wirelessly. Solutions:
+    (i) Power transmission via satellites, last year Japan conducted a research and tranmsitted electric power of around 2kilo watts at a         distance of 60meters.  
+    (ii) Designing of power receiving board that uses sensors
+    (iii) Resonant power transfer sytem that can be carried and operated
+4. Marketting plan: 5-10% of each block traded will be profit. 
+5. Advantages:
+   (i)   Very fast in action
+   (ii)  Cost effective for both buyer and seller
+   (iii) Less fraudlents involvemnt
+  
